@@ -24,7 +24,7 @@ def get_source_list(result):
 ###########################
 
 # open a file, where you stored the pickled data
-file = open('LC_faiss_vectorstore', 'rb') 
+file = open('SEC_APA_faiss_vectorstore_V1', 'rb') 
 
 # dump information to that file
 docsearch1 = pickle.load(file)
@@ -34,10 +34,10 @@ file.close()
 
 KEY = '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'
 
-system_template="""The following is a set of text extracted from power points and other company files. It relates to the past experiences and offerings of the technology consulting firm Logic 20/20 for its clients.
-You are a helpful bot that answers questions coming from company employees related to the following knowledgebase of text.
+system_template="""The following is a set of text extracted from legal documents dealing with the purchase, sale, or redistribution of company assets or equity.
+You are a helpful bot that answers questions coming from lawyers related to the following knowledgebase of text.
 
-Take note of the documents and pages that the texts come from. If any are particularly helpful in formulating your answer, cite them at the end of your answer by mentioning the documents and page numbers.
+Take note of the company tickers, URLs and accessation numbers that the texts below come from. Please cite them at the end of your answer.
 If you don't know the answer, just say that "I don't know", don't try to make up an answer.
 ----------------
 {summaries}"""
@@ -50,7 +50,7 @@ prompt = ChatPromptTemplate.from_messages(messages)
 
 #memory = ConversationBufferMemory(llm=llm, input_key='question', output_key='answer', memory_key="chat_history", return_messages=True)
 chain_type_kwargs = {"prompt": prompt}
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, openai_api_key=KEY)
+llm = ChatOpenAI(model_name="gpt-3.5-turbo-16k", temperature=0, openai_api_key=KEY)
 qa_chain = RetrievalQAWithSourcesChain.from_chain_type(
     llm=llm,
     chain_type="stuff",
@@ -67,7 +67,7 @@ import streamlit as st
 import random
 import time
 
-st.title("Chat SME")
+st.title("Asset Purchase Agreement LLM")
 
 # Initialize chat history
 if "messages" not in st.session_state:
