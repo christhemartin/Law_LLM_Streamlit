@@ -14,8 +14,8 @@ def get_source_list(result):
   out = ''
   i = 1
   for doc in result['source_documents']:
-    row = 'Source {}: {} | Page: {} \n\n'.format(i, doc.metadata['source'], doc.metadata['page'])
-    out += row 
+    row = 'Source {}: {}\n'.format(i, doc.metadata['source'])
+    out += row
     i+=1
   return out
 
