@@ -24,7 +24,7 @@ def get_source_list(result):
 ###########################
 
 # open a file, where you stored the pickled data
-file = open('SEC_APA_faiss_vectorstore_V1', 'rb') 
+file = open('LLM_faiss_vectorstore_SEC_v2000', 'rb') 
 
 # dump information to that file
 docsearch1 = pickle.load(file)
