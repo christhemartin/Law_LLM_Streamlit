@@ -32,7 +32,7 @@ docsearch1 = pickle.load(file)
 # close the file
 file.close()
 
-KEY = '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' #'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'
+KEY = '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'
 
 system_template="""The following is a set of text extracted from legal documents dealing with the purchase, sale, or redistribution of company assets or equity.
 You are a helpful bot that answers questions coming from lawyers related to the following knowledgebase of text.
