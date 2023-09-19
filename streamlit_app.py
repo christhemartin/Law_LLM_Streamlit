@@ -24,7 +24,7 @@ def get_source_list(result):
 ###########################
 
 # open a file, where you stored the pickled data
-file = open('LLM_faiss_vectorstore_SEC_v2000', 'rb') 
+file = open('LLM_faiss_vectorstore_SEC_v1000', 'rb') 
 
 # dump information to that file
 docsearch1 = pickle.load(file)
@@ -32,7 +32,7 @@ docsearch1 = pickle.load(file)
 # close the file
 file.close()
 
-KEY = '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'
+KEY = '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'
 
 system_template="""The following is a set of text extracted from legal documents dealing with the purchase, sale, or redistribution of company assets or equity.
 You are a helpful bot that answers questions coming from lawyers related to the following knowledgebase of text.
