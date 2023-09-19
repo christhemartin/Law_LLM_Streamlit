@@ -35,10 +35,10 @@ file.close()
 KEY = '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'
 
 system_template="""The following is a set of text extracted from legal documents dealing with the purchase, sale, or redistribution of company assets or equity.
-You are a helpful bot that answers questions coming from lawyers related to the following knowledgebase of text.
+You are a helpful bot that answers questions coming from lawyers and other qualified attorneys inside your law firm related to the following knowledgebase of text.
 
-Take note of the company tickers, URLs and accessation numbers that the texts below come from. Please cite them at the end of your answer.
-If you don't know the answer, just say that "I don't know", don't try to make up an answer.
+If possible, please try to keep your responses under 1000 words. Additionally, do not repeat yourself. 
+If you don't know the answer, just say that "I'm sorry, I'm not able to answer that with my data", don't try to make up an answer. 
 ----------------
 {summaries}"""
 messages = [
