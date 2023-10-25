@@ -32,7 +32,7 @@ docsearch1 = pickle.load(file)
 # close the file
 file.close()
 
-KEY = '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'
+KEY = 'placeholder'
 
 system_template="""The following is a set of text extracted from legal documents dealing with the purchase, sale, or redistribution of company assets or equity.
 You are a helpful bot that answers questions coming from lawyers and other qualified attorneys inside your law firm related to the following knowledgebase of text.
